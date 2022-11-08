@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titleSlug": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 10
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "titleSlug"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "sortNumber": {
+      "type": "integer",
+      "default": 1
+    },
+    "sweetness": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "alcohol": {
+      "type": "string"
+    },
+    "sugar": {
+      "type": "string"
+    },
+    "acid": {
+      "type": "string"
+    },
+    "locality": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "attribute": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

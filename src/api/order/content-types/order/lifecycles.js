@@ -206,5 +206,15 @@ module.exports = {
         } catch(err) {
             console.log(err);
         }
+
+        try {
+            await strapi.plugins.email.services.email.sendTemplatedEmail({
+                to: `info@vilapavlov.cz`,
+            },
+            customerEmailTemplate,
+            );
+        } catch(err) {
+            console.log(err);
+        }
     }
 }
